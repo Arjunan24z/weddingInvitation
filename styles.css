@@ -6,14 +6,14 @@
     --accent-purple: #B8A6C7;
     --accent-blue: #A8C5E6;
     --accent-teal: #9CC5C5;
-    --bg-cream: #FFF9F5;
-    --bg-light: #FFFFFF;
+    --bg-cream: #E8DCC8;
+    --bg-light: #EDE5D8;
     --text-dark: #3D3935;
-    --text-light: #8B8680;
-    --shadow-color: rgba(201, 165, 123, 0.25);
-    --glow-color: rgba(230, 201, 168, 0.4);
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.35);
+    --text-light: #6B6560;
+    --shadow-color: rgba(201, 165, 123, 0.3);
+    --glow-color: rgba(201, 165, 123, 0.35);
+    --glass-bg: rgba(245, 237, 220, 0.4);
+    --glass-border: rgba(201, 165, 123, 0.3);
 }
 
 [data-theme="dark"] {
@@ -154,7 +154,7 @@ body[lang="ta"] {
     z-index: 1500;
     width: 50px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(245, 237, 220, 0.95);
     border: 2px solid var(--primary-gold);
     border-radius: 50%;
     cursor: pointer;
@@ -213,7 +213,7 @@ body[lang="ta"] {
     height: 50px;
     border-radius: 50%;
     border: 1px solid rgba(201, 165, 123, 0.4);
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(245, 237, 220, 0.9);
     backdrop-filter: blur(20px);
     cursor: pointer;
     font-size: 18px;
@@ -222,8 +222,8 @@ body[lang="ta"] {
     align-items: center;
     justify-content: center;
     box-shadow: 
-        0 4px 15px rgba(201, 165, 123, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 4px 15px rgba(201, 165, 123, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .control-btn:hover {
@@ -265,6 +265,15 @@ body[lang="ta"] {
     transform: translate(-50%, -50%);
     z-index: 0;
     object-fit: cover;
+}
+
+/* Mobile video optimization */
+@media (max-width: 767px) {
+    .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @keyframes backgroundPulse {
@@ -588,7 +597,7 @@ body[lang="ta"] {
 
 /* Additional light mode fixes */
 [data-theme="light"] .nav-button {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(245, 237, 220, 0.9);
     border: 2px solid rgba(201, 165, 123, 0.4);
     color: #3D3935;
 }
@@ -632,7 +641,7 @@ body[lang="ta"] {
 }
 
 .person-card {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(245, 237, 220, 0.5);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-radius: 30px;
@@ -645,7 +654,7 @@ body[lang="ta"] {
         0 8px 32px rgba(201, 165, 123, 0.12),
         0 20px 60px rgba(201, 165, 123, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(201, 165, 123, 0.25);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
 }
@@ -976,10 +985,10 @@ body[lang="ta"] {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(245, 237, 220, 0.35);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(201, 165, 123, 0.3);
     color: var(--text-dark);
     font-size: 2.5rem;
     cursor: pointer;
@@ -1157,7 +1166,7 @@ body[lang="ta"] {
 }
 
 .location-card {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(245, 237, 220, 0.5);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-radius: 30px;
@@ -1170,7 +1179,7 @@ body[lang="ta"] {
         0 8px 32px rgba(201, 165, 123, 0.12),
         0 20px 60px rgba(201, 165, 123, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(201, 165, 123, 0.25);
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
@@ -1428,7 +1437,7 @@ body[lang="ta"] {
 }
 
 .ceremony-card {
-    background: rgba(255, 255, 255, 0.33);
+    background: rgba(245, 237, 220, 0.45);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-radius: 25px;
@@ -1441,7 +1450,7 @@ body[lang="ta"] {
     position: relative;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(201, 165, 123, 0.25);
 }
 
 .ceremony-card::before {
@@ -1513,13 +1522,11 @@ body[lang="ta"] {
 .ceremony-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-burgundy), var(--primary-rose));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-dark);
     margin-bottom: 20px;
     letter-spacing: 1px;
     transition: transform 0.3s ease;
+    font-weight: 700;
 }
 
 .ceremony-card:hover .ceremony-title {
@@ -1589,7 +1596,7 @@ body[lang="ta"] {
 }
 
 .time-box {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(245, 237, 220, 0.5);
     backdrop-filter: blur(30px) saturate(180%);
     -webkit-backdrop-filter: blur(30px) saturate(180%);
     border-radius: 24px;
@@ -1599,7 +1606,7 @@ body[lang="ta"] {
         0 20px 60px rgba(201, 165, 123, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
     min-width: 150px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(201, 165, 123, 0.25);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;

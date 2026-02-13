@@ -86,6 +86,18 @@ window.addEventListener('load', () => {
         console.log('Auto-play blocked. User interaction required.');
         musicToggle.style.animation = 'pulse 2s ease-in-out infinite';
     });
+    
+    // Ensure video plays on mobile
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.play().catch(error => {
+            console.log('Video autoplay blocked:', error);
+            // Try to play on first user interaction
+            document.body.addEventListener('touchstart', () => {
+                heroVideo.play().catch(e => console.log('Video play failed:', e));
+            }, { once: true });
+        });
+    }
 });
 
 // Fallback: Play on first user interaction
